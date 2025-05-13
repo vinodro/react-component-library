@@ -9,11 +9,23 @@
     "check-types": "turbo run check-types"
   },
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^28.0.3",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@rollup/plugin-typescript": "^12.1.2",
     "@storybook/addon-essentials": "^8.6.12",
     "@storybook/react-vite": "^8.6.12",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.3",
     "prettier": "^3.5.3",
+    "rimraf": "^6.0.1",
+    "rollup": "^4.40.2",
+    "rollup-plugin-dts": "^6.2.1",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "sass": "^1.88.0",
     "turbo": "^2.5.3",
-    "typescript": "5.8.2"
+    "typescript": "^5.8.2"
   },
   "engines": {
     "node": ">=18"
@@ -22,5 +34,8 @@
   "workspaces": [
     "apps/*",
     "packages/*"
-  ]
+  ],
+  "publishConfig": {
+  "registry": "https://npm.pkg.github.com/"
+}
 }

@@ -36,3 +36,24 @@ yarn-error.log*
 # Misc
 .DS_Store
 *.pem
+
+# Root node_modules and lock files
+node_modules/
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# Output directories in all packages
+packages/*/node_modules/
+packages/*/dist/
+packages/*/.rollup.cache/
+packages/*/.turbo/
+
+# IDE/editor settings
+.vscode/
+.idea/
+*.log
+.DS_Store
+
+# TypeScript build info
+packages/*/tsconfig.tsbuildinfo

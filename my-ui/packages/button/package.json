@@ -1,11 +1,14 @@
 {
   "name": "@vinodro/button",
-  "version": "0.1.0",
-  "main": "dist/index.js",
+  "version": "1.0.0",
+  "main": "dist/index.cjs.js",
   "types": "dist/index.d.ts",
+  "module": "dist/index.esm.js",
   "files": ["dist"],
+  "type": "module",
   "scripts": {
-    "build": "tsc",
+    "clean": "rimraf dist",
+    "build": "npm run clean && rollup -c",
     "dev": "vite",
     "prepublishOnly": "npm run build"
   },
@@ -19,7 +22,5 @@
   "devDependencies": {
     "vite": "^5",
     "typescript": "^5"
-  },
-  "extends": "../../tsconfig.base.json",
-  "include": ["src"]
+  }
 }
